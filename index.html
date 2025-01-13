@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe | Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('header p a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionID = this.getAttribute('href').substring(1);
+                    const section = document.getElementById(sectionID);
+                    if (section) {
+                        window.scrollTo({
+                            top: section.offsetTop - 60,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Asish Kumar</h1>
+        <p>
+            <a href="#home">Home</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#blogs">Blogs</a> |
+            <a href="#contact">Contact</a>
+        </p>
+    </header>
+    <section id="home">
+        <h2>App Developer and Designer</h2>
+    </section>
+    <section id="projects">
+        <table>
+            <tr>
+                <td>
+                    <h3>Portfolio Highlights</h3>
+                    <ul>
+                        <li>Responsive HTML Layout</li>
+                        <li>CSS Flexbox and Grid</li>
+                        <li>Interactive Form Design</li>
+                    </ul>
+                </td>
+                <td>
+                    <h3>Career Achievements</h3>
+                    <p>Developed a Safety Navigation App for visually impaired individuals, enhancing safe travel through voice commands and real-time obstacle detection.<br></p><a href="https://www.linkedin.com/feed/">View My LinkedIn Profile</a></p>
+                    <h3>Community Involvement</h3>
+                    <p>Active in developer forums and contributor to GitHub projects.<br><a href="https://github.com/AsishKumar24">Visit My GitHub</a></p>
+                </td>
+                <td>
+                    <h3>Academic Qualifications</h3>
+                    <p>B.Tech (Electronic and Computer Science) from KIIT University</p>
+                    <ul>
+                        <li>React-Native Developer</li>
+                        <li>Mobile Application Development</li>
+                        <li>JavaScript (ES6+), TypeScript</li>
+                        <li>UI/UX Design Principles</li>
+                        <li>Backend Integration (APIs, Firebase)</li>
+                        <li>Software Engineering & Agile Methodologies</li>
+                        <li>Advanced Algorithms</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="blogs">
+        <h3 style="text-align:center; color:#6f34fe;">Peer Reviews</h3>
+        <table>
+            <tr>
+                <td><em>"Asish Kumar consistently delivers innovative solutions."</em> - Akash, Project Lead</td>
+                <td><em>"Asish mentors younger developers with precision."</em> - Arundoy, Backend Developer</td>
+                <td><em>"Asish's problem-solving is key to our success."</em> - Ashmit, Frontend Developer</td>
+            </tr>
+        </table>
+    </section>
+    <footer id="contact">
+        © 2025 All rights reserved by Asish Kumar
+    </footer>
+</body>
+</html>
